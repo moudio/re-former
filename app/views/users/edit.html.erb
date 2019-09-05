@@ -12,8 +12,9 @@
 <% end %> -->
 
 <%= form_for @user do |f| %>
+    <%= render 'shared/error_messages'%>
     <%= f.label :username %> <br>
-    <%= f.text_field :username, placeholder: "Enter your username", value: 'Username'%> <br>
+    <%= f.text_field :username, placeholder: "Enter your username"%> <br>
     <%= f.label :email %> <br>
     <%= f.email_field :email, placeholder: "example@email.com", value:'Email' %> <br>
     <%= f.label :password %> <br>
