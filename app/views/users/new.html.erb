@@ -1,6 +1,11 @@
-<form action="/" method="post" accept-charset="UTF-8">
-<label for="username">Username</label>
-<input type="text" name="username">
-<input type="email">
-<input type="password">
+<form action="/users" method="post" accept-charset="UTF-8">
+<label for="username">Username</label> <br>
+<input type="text" id="username" name="username"> <br>
+<label for ="email">Email</label> <br>
+<input type="email" id ="email" name="email"> <br>
+<label for="password">Password</label><br>
+<input type="password" id="password" name="password"> <br>
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<input type="submit">
+
 </form>
