@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
     if @user.update_attributes(user_params)
       flash[:success] = 'User updated!'
-      redirect_to user_path
+      redirect_to edit_user_path
     else
       render action: :edit
     end
@@ -23,8 +23,6 @@ class UsersController < ApplicationController
   def show; end
 
   def create
-    # @user = User.new(username: params[:username], email: params[:email], password: params[:password])
-
     @user = User.new(user_params)
 
     if @user.save
