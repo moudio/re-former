@@ -1,0 +1,23 @@
+ <!--<%= form_tag("/users", method: "post") do %>
+    <%= label_tag(:username, "Username:") %><br>
+    <%= text_field_tag(:username) %><br>
+    
+    <%= label_tag(:email, "email:") %><br>
+    <%= email_field_tag(:email) %><br>
+    
+    <%= label_tag(:password, "password:") %><br>
+    <%= password_field_tag(:password) %><br>
+
+    <%= submit_tag("Submit") %>
+<% end %> -->
+
+<%= form_for @user do |f| %>
+    <%= render 'shared/error_messages'%>
+    <%= f.label :username %> <br>
+    <%= f.text_field :username, placeholder: "Enter your username"%> <br>
+    <%= f.label :email %> <br>
+    <%= f.email_field :email, placeholder: "example@email.com" %> <br>
+    <%= f.label :password %> <br>
+    <%= f.password_field :password, value:"********"%> <br>
+    <%= f.submit 'Update Account'%>
+<% end %> 
